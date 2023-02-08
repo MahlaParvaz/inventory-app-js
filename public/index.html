@@ -8,63 +8,130 @@
     <title>Document</title>
   </head>
   <body>
-    <div class="w-screen h-screen bg-violet-400">
+    <div class="bg-gray-50">
       <!-- appbar -->
-      <div></div>
+      <div class="mb-8"></div>
       <!-- app content -->
-      <div class="container mx-w-sm mx-auto">
+      <div class="container max-w-screen-sm mx-auto">
         <!--  category form -->
-        <div class="">
-          <h2>Add New Category</h2>
-          <form class="p-4 rounded-xl flex flex-col gap-y-4">
-            <div class="flex flex-col">
-              <label for="category-title">Category Title</label>
+        <div class="mb-8">
+          <h2 class="text-xl text-slate-700 font-bold mb-2">Add New Category</h2>
+          <form class="bg-white p-4 rounded-xl flex flex-col gap-y-4 shadow-2xl">
+            <div>
+              <label for="category-title" class="text-slate-700 block mb-1">Category Title</label>
               <input
                 type="text"
                 name="category-title"
                 id="category-title"
-                class="border-2 rounded-xl px-2 py-1 w-1/4"
+                class="bg-transparent border rounded-xl border-slate-400 text-slate-600"
                 placeholder="title..."
               />
             </div>
             <div>
-              <label for="category-description">Category description</label>
+              <label for="category-description" class="text-slate-700 block mb-1">Category description</label>
               <textarea
                 type="text"
                 name="category-description "
                 id="category-description"
-                class="border-2 rounded-xl p-2 w-full"
+                class="bg-transparent border rounded-xl border-slate-400 text-slate-600 w-full"
               ></textarea>
             </div>
 
-            <div class="flex flex-row gap-x-4">
-              <button type="submit" class="p-2 w-2/4 border-2 rounded-xl">Cancle</button>
-              <button type="submit" class="p-2 w-2/4 border-2 rounded-xl">Add New Category</button>
+            <div class="flex flex-row justify-between gap-x-4">
+              <button type="submit" class="flex-1 py-2 border border-slate-400 rounded-xl text-slate-800">
+                Cancle
+              </button>
+              <button type="submit" class="flex-1 py-2 border border-slate-400 rounded-xl text-white bg-blue-600">
+                Add New Category
+              </button>
             </div>
           </form>
         </div>
         <!-- add product -->
-        <div class="m-4 p-4 w-3/6 flex flex-col bg-blue-200 rounded-xl">
-          <!-- <div>Add New Product</div> -->
+        <div class="mb-8">
+          <h2 class="text-xl text-slate-700 font-bold mb-2">Add New Product</h2>
           <div>
-            <form action="">
-              <div class="flex flex-col">
-                <label for="">Product Title</label>
-                <input type="text" class="border-2 rounded-xl px-2 py-1 mb-2.5 w-1/4" placeholder="product title..." />
+            <form class="bg-white p-4 rounded-xl flex flex-col gap-y-4 shadow-2xl">
+              <div>
+                <label for="product-title" class="block mb-1">Product Title</label>
+                <input
+                  type="text"
+                  name="product-title"
+                  id="product-title"
+                  class="bg-transparent border rounded-xl border-slate-400 text-slate-600"
+                  placeholder="product title..."
+                />
               </div>
-              <div class="flex flex-col">
-                <label for="">Quantity </label>
-                <input type="text" class="border-2 rounded-xl px-2 py-1 mb-2.5 w-1/4" placeholder="quantity..." />
+              <div>
+                <label for="product-quantity" class="block mb-1">Quantity </label>
+                <input
+                  type="number"
+                  name="product-quantity"
+                  id="product-quantity"
+                  class="bg-transparent border rounded-xl border-slate-400 text-slate-600"
+                  placeholder="quantity..."
+                />
               </div>
-              <p>Category</p>
-              <select name="" id="" class="w-full border-2 rounded-xl p-2">
-                <option value="">select a category</option>
-              </select>
-              <button type="submit" class="p-2 border-2 rounded-xl w-full mt-2">Add New Product</button>
+              <div>
+                <label for="product-category" class="block mb-1">Category</label>
+                <select
+                  name="product-category"
+                  id="product-category"
+                  class="bg-transparent border rounded-xl border-slate-400 text-slate-600 w-full"
+                >
+                  <option value="">select a category</option>
+                  <option value="backend">backend</option>
+                  <option value="frontend">frontend</option>
+                </select>
+              </div>
+              <div class="flex flex-row justify-between gap-x-4">
+                <button type="submit" class="flex-1 py-2 border border-slate-400 rounded-xl text-white bg-blue-600">
+                  Add New Product
+                </button>
+              </div>
             </form>
           </div>
         </div>
         <!-- product list -->
+        <div>
+          <h2 class="text-xl text-slate-700 font-bold mb-2">Added Product</h2>
+          <div>
+            <div class="flex flex-row justify-between mb-4">
+              <label for="sort-product" class="">Sort</label>
+              <select
+                name="sort-product"
+                id="sort-product"
+                class="bg-transparent border rounded-xl border-slate-400 text-slate-600 w-1/4"
+              >
+                <option value="">newest</option>
+                <option value="backend">backend</option>
+                <option value="frontend">frontend</option>
+              </select>
+            </div>
+            <div class="flex flex-row justify-between mb-4">
+              <label for="search-product" class="">Search</label>
+              <input
+                name="search-product"
+                id="search-product"
+                class="bg-transparent border rounded-xl border-slate-400 text-slate-600 w-2/5 py-2"
+              />
+            </div>
+            <h2 class="text-xl text-slate-700 font-bold mb-2">Product List</h2>
+            <!-- product item list -->
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-slate-700 font-bold">folan</span>
+              <div class="flex items-center justify-between gap-x-2">
+                <span>1401/2/16</span>
+                <span class="border border-slate-400 px-3 py-0.5 rounded-2xl">backend</span>
+                <span
+                  class="w-7 h-7 border border-2 border-slate-400 rounded-full flex items-center justify-center bg-blue-600 text-white text-sm"
+                  >10</span
+                >
+                <button class="border border-red-600 text-red-600 px-2 py-0.5 rounded-2xl">delete</button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </body>
