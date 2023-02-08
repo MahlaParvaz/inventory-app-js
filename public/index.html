@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./build/tailwind.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="w-screen h-screen bg-violet-400">
+      <!-- appbar -->
+      <div></div>
+      <!-- app content -->
+      <div class="container mx-w-sm mx-auto">
+        <!--  category form -->
+        <div class="">
+          <h2>Add New Category</h2>
+          <form class="p-4 rounded-xl flex flex-col gap-y-4">
+            <div class="flex flex-col">
+              <label for="category-title">Category Title</label>
+              <input
+                type="text"
+                name="category-title"
+                id="category-title"
+                class="border-2 rounded-xl px-2 py-1 w-1/4"
+                placeholder="title..."
+              />
+            </div>
+            <div>
+              <label for="category-description">Category description</label>
+              <textarea
+                type="text"
+                name="category-description "
+                id="category-description"
+                class="border-2 rounded-xl p-2 w-full"
+              ></textarea>
+            </div>
+
+            <div class="flex flex-row gap-x-4">
+              <button type="submit" class="p-2 w-2/4 border-2 rounded-xl">Cancle</button>
+              <button type="submit" class="p-2 w-2/4 border-2 rounded-xl">Add New Category</button>
+            </div>
+          </form>
+        </div>
+        <!-- add product -->
+        <div class="m-4 p-4 w-3/6 flex flex-col bg-blue-200 rounded-xl">
+          <!-- <div>Add New Product</div> -->
+          <div>
+            <form action="">
+              <div class="flex flex-col">
+                <label for="">Product Title</label>
+                <input type="text" class="border-2 rounded-xl px-2 py-1 mb-2.5 w-1/4" placeholder="product title..." />
+              </div>
+              <div class="flex flex-col">
+                <label for="">Quantity </label>
+                <input type="text" class="border-2 rounded-xl px-2 py-1 mb-2.5 w-1/4" placeholder="quantity..." />
+              </div>
+              <p>Category</p>
+              <select name="" id="" class="w-full border-2 rounded-xl p-2">
+                <option value="">select a category</option>
+              </select>
+              <button type="submit" class="p-2 border-2 rounded-xl w-full mt-2">Add New Product</button>
+            </form>
+          </div>
+        </div>
+        <!-- product list -->
+      </div>
+    </div>
+  </body>
+</html>
