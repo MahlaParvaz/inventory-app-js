@@ -3,18 +3,21 @@ const products = [
     id: 1,
     title: 'React.js',
     category: 'frontend ',
+    quantity: '3',
     createdAt: '2021-9-31T15:03:23.556Z',
   },
   {
     id: 2,
     title: 'Node.js',
     category: 'backend ',
+    quantity: '4',
     createdAt: '2021-10-31T15:03:23.556Z',
   },
   {
     id: 3,
     title: 'Vue.js',
     category: 'frontend ',
+    quantity: '5',
     createdAt: '2021-11-31T15:03:23.556Z',
   },
 ];
@@ -68,15 +71,15 @@ export default class Storage {
     const existedProducts = categories.find((product) => product.id === productToSave.id);
     if (existedProducts) {
       // edit
-      existedProducts.title = categoryToSave.title;
-      existedProducts.category = categoryToSave.category;
-      existedProducts.quantity = categoryToSave.quantity;
+      existedProducts.title = productToSave.title;
+      existedProducts.category = productToSave.category;
+      existedProducts.quantity = productToSave.quantity;
       existedProducts.createdAt = new Date().toISOString();
     } else {
       // new
-      categoryToSave.id = new Date().getTime();
-      categoryToSave.createdAt = new Date().toISOString();
-      Products.push(categoryToSave);
+      productToSave.id = new Date().getTime();
+      productToSave.createdAt = new Date().toISOString();
+      Products.push(productToSave);
     }
     localStorage.setItem('products', JSON.stringify(Products));
   }

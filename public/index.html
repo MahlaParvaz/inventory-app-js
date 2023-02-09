@@ -89,7 +89,11 @@
                 </select>
               </div>
               <div class="flex flex-row justify-between gap-x-4">
-                <button type="submit" class="flex-1 py-2 border border-slate-400 rounded-xl text-white bg-blue-600">
+                <button
+                  type="submit"
+                  id="add-new-product"
+                  class="flex-1 py-2 border border-slate-400 rounded-xl text-white bg-blue-600"
+                >
                   Add New Product
                 </button>
               </div>
@@ -122,18 +126,21 @@
             </div>
             <h2 class="text-xl text-slate-700 font-bold mb-2">Product List</h2>
             <!-- product item list -->
-            <div class="flex items-center justify-between mb-2">
-              <span class="text-slate-700 font-bold">folan</span>
-              <div class="flex items-center justify-between gap-x-2">
-                <span>1401/2/16</span>
-                <span class="border border-slate-400 px-3 py-0.5 rounded-2xl">backend</span>
-                <span
-                  class="w-7 h-7 border border-2 border-slate-400 rounded-full flex items-center justify-center bg-blue-600 text-white text-sm"
-                  >10</span
-                >
-                <button class="border border-red-600 text-red-600 px-2 py-0.5 rounded-2xl">delete</button>
-              </div>
+            <div id="products-list">
+              <!-- <div  class="flex items-center justify-between mb-2">
+                <span class="text-slate-700 font-bold">folan</span>
+                <div class="flex items-center justify-between gap-x-2">
+                  <span>1401/2/16</span>
+                  <span class="border border-slate-400 px-3 py-0.5 rounded-2xl">backend</span>
+                  <span
+                    class="w-7 h-7 border border-2 border-slate-400 rounded-full flex items-center justify-center bg-blue-600 text-white text-sm"
+                    >10</span
+                  >
+                  <button class="border border-red-600 text-red-600 px-2 py-0.5 rounded-2xl">delete</button>
+                </div>
+              </div> -->
             </div>
+  
           </div>
         </div>
       </div>
