@@ -683,6 +683,9 @@ select {
 .mb-4 {
   margin-bottom: 1rem;
 }
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
 .block {
   display: block;
 }
@@ -691,6 +694,9 @@ select {
 }
 .h-7 {
   height: 1.75rem;
+}
+.h-20 {
+  height: 5rem;
 }
 .w-full {
   width: 100%;
@@ -776,6 +782,9 @@ select {
 }
 .p-4 {
   padding: 1rem;
+}
+.p-2 {
+  padding: 0.5rem;
 }
 .py-2 {
   padding-top: 0.5rem;

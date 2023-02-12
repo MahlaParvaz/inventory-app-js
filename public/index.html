@@ -82,11 +82,7 @@
                   name="product-category"
                   id="product-category"
                   class="bg-transparent border rounded-xl border-slate-400 text-slate-600 w-full"
-                >
-                  <!-- <option value="">select a category</option>
-                  <option value="backend">backend</option>
-                  <option value="frontend">frontend</option> -->
-                </select>
+                ></select>
               </div>
               <div class="flex flex-row justify-between gap-x-4">
                 <button
@@ -101,48 +97,29 @@
           </div>
         </div>
         <!-- product list -->
-        <div>
-          <h2 class="text-xl text-slate-700 font-bold mb-2">Added Product</h2>
-          <div>
-            <div class="flex flex-row justify-between mb-4">
-              <label for="sort-product" class="">Sort</label>
-              <select
-                name="sort-product"
-                id="sort-product"
-                class="bg-transparent border rounded-xl border-slate-400 text-slate-600 w-1/4"
-              >
-                <option value="">newest</option>
-                <option value="backend">backend</option>
-                <option value="frontend">frontend</option>
-              </select>
-            </div>
-            <div class="flex flex-row justify-between mb-4">
-              <label for="search-product" class="">Search</label>
-              <input
-                name="search-product"
-                id="search-product"
-                class="bg-transparent border rounded-xl border-slate-400 text-slate-600 w-2/5 py-2"
-              />
-            </div>
-            <h2 class="text-xl text-slate-700 font-bold mb-2">Product List</h2>
-            <!-- product item list -->
-            <div id="products-list">
-              <!-- <div  class="flex items-center justify-between mb-2">
-                <span class="text-slate-700 font-bold">folan</span>
-                <div class="flex items-center justify-between gap-x-2">
-                  <span>1401/2/16</span>
-                  <span class="border border-slate-400 px-3 py-0.5 rounded-2xl">backend</span>
-                  <span
-                    class="w-7 h-7 border border-2 border-slate-400 rounded-full flex items-center justify-center bg-blue-600 text-white text-sm"
-                    >10</span
-                  >
-                  <button class="border border-red-600 text-red-600 px-2 py-0.5 rounded-2xl">delete</button>
-                </div>
-              </div> -->
-            </div>
-  
-          </div>
+        <h2 class="text-xl text-slate-700 font-bold mb-2">Product List</h2>
+        <div class="flex flex-row justify-between mb-4">
+          <label for="sort-product" class="">Sort</label>
+          <select
+            name="sort-product"
+            id="sort-product"
+            class="bg-transparent border rounded-xl border-slate-400 text-slate-600 w-1/4"
+          >
+            <option value="">select a category</option>
+            <option selected value="newest">newest</option>
+            <option value="oldest">oldest</option>
+          </select>
         </div>
+        <div class="flex flex-row justify-between mb-6">
+          <label for="search-product" class="">Search</label>
+          <input
+            name="search-product"
+            id="search-product"
+            class="bg-transparent border rounded-xl border-slate-400 text-slate-600 w-2/5 p-2"
+          />
+        </div>
+        <div id="products-list"></div>
+        <div class="h-20"></div>
       </div>
     </div>
     <script src="/src/js/app.js" type="module"></script>
